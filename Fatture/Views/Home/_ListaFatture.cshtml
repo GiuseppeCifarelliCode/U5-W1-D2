@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Fatture.Models.Fattura>
+
+
+
+<table>
+    <tr>
+        <th class="px-2">N.Fattura</th>
+        <th class="px-2">Data Emissione</th>
+        <th class="px-2">Nominativo</th>
+        <th class="px-2">Importo</th>
+    </tr>
+    @foreach (Fatture.Models.Fattura fattura in Model)
+    {
+        <tr>
+            <td class="px-2">@fattura.nFattura</td>
+            <td class="px-2">@fattura.Data.ToShortDateString()</td>
+            <td class="px-2">@fattura.Nominativo</td>
+            <td class="px-2">$@fattura.Importo</td>
+        </tr>
+    }
+</table>

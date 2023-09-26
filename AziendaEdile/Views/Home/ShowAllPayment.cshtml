@@ -1,0 +1,25 @@
+﻿@model IEnumerable<AziendaEdile.Models.PagamentoDipendente>
+@{
+    ViewBag.Title = "ShowAllPayment";
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Lavoro</th>
+        <th>Importo($)</th>
+        <th>Data</th>
+    </tr>
+    @foreach (AziendaEdile.Models.PagamentoDipendente dipendente in Model)
+    {
+        <tr>
+            <td>@dipendente.Name</td>
+            <td>@dipendente.Surname</td>
+            <td>@dipendente.Job</td>
+            <td>$@dipendente.Amount</td>
+            <td>@dipendente.Date.ToShortDateString()</td>
+        </tr>
+    }
+</table>
+

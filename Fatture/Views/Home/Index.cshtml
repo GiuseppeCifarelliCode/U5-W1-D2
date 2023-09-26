@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Fatture.Models.Fattura>
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Action("_ListaFatture")
+<p class="m-2">Il totale delle fatture emesse è: $@Fatture.Models.Fattura.getTotFatture()</p>
+
